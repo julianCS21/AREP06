@@ -122,7 +122,7 @@ Base de datos de mongo.
 
 ## Video prueba del despliegue 
 
-[![Video](https://www.youtube.com/watch?v=kVhG_CmOYck&ab_channel=JulianCastillo)]
+https://www.youtube.com/watch?v=kVhG_CmOYck&ab_channel=JulianCastillo
 
 El video demuestra que esta desplegado en la nube de AWS, ademas a traves de los logs de el contenedor de Round Robin se puede observar el funcionamiento del algoritmo.
 
