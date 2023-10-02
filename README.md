@@ -96,27 +96,35 @@ Ejecutamos el comando
 ### Arquitectura del programa.
 
 
+![image](https://github.com/julianCS21/AREP06/assets/96396177/4887a165-897e-4a90-9462-d0b8a21b2f86)
 
-La estructura del programa consta de varias capas, cada una con su función específica:
-
-### server
-
-
-La capa server actúa como punto de entrada para las solicitudes entrantes, dirigiéndolas hacia las partes apropiadas del programa.
-
-### view
+Esta arquitectura se basa en tres componentes realmente:
 
 
-La capa view contiene las vistas que presenta el servidor.
-
-### services
-
-La capa services contiene la logica del programa, donde estan ubicados los endpoints del servidor web.
+## Round Robin
 
 
-Esta estructura de capas facilita la organización, mantenimiento y escalabilidad del programa al separar las responsabilidades en componentes claros y definidos.
+Contenedor que actua como frontend del proyecto, su objetivo es implementar el algoritmo de Round Robin para distribuir la carga entre el backend del proyecto 
 
 
+
+## LogService
+
+Contenedor encargado del backend, el cual lee un mensaje y lo guarda en la base de datos, luego retorna los ultimos 10 mensajes.
+
+Este contenedor cuenta con 3 instancias para otorgar mayor disponibilidad al proyecto.
+
+
+## mongoDB
+
+Base de datos de mongo.
+
+
+## Video prueba del despliegue 
+
+[![Video](https://www.youtube.com/watch?v=kVhG_CmOYck&ab_channel=JulianCastillo)]
+
+El video demuestra que esta desplegado en la nube de AWS, ademas a traves de los logs de el contenedor de Round Robin se puede observar el funcionamiento del algoritmo.
 
 
 
@@ -130,6 +138,7 @@ Esta estructura de capas facilita la organización, mantenimiento y escalabilida
 * [JavaScript](https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript): lenguaje de programación que los desarrolladores utilizan para hacer paginas web dinamicas.
 * [CSS](https://developer.mozilla.org/es/docs/Web/CSS) Lenguaje para darles estilos a paginas web.
 * [Docker](https://www.docker.com) Automatiza el despliegue de aplicaciones dentro de contenedores de software.
+* [AWS](https://aws.amazon.com/es/free/?trk=8fa18207-f2c2-4587-81a1-f2a3648571b3&sc_channel=ps&ef_id=CjwKCAjwseSoBhBXEiwA9iZtxmEwAgfk7jPE4NlzdkF60BOim6V2loEW5eNT7e8yJcbyO0g8dZpJaBoCRIEQAvD_BwE:G:s&s_kwcid=AL!4422!3!647999789205!e!!g!!aws!19685287144!146461596896&gclid=CjwKCAjwseSoBhBXEiwA9iZtxmEwAgfk7jPE4NlzdkF60BOim6V2loEW5eNT7e8yJcbyO0g8dZpJaBoCRIEQAvD_BwE&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all) colección de servicios de computación en la nube pública que en conjunto forman una plataforma de computación en la nube
 
 
 ## Autor
